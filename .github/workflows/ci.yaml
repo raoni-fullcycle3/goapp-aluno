@@ -2,13 +2,13 @@ name: ci-golang-workflow
 on:
   pull_request:
     branches:
-      - develop
-strategy:
-  matrix:
-    go: [ '1.14','1.15' ]
+      - master
 jobs:
   check-application:
     runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        go: [ '1.14','1.15' ]
     steps:
       - uses: actions/checkout@v2 #pega os dados que foram subidos e envia para a máquina ubuntu
       - uses: actions/setup-go@v2 #prepara o ambiente para rodar o go
