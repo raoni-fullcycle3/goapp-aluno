@@ -2,7 +2,7 @@ name: ci-golang-workflow
 on: [push]
 jobs:
   check-application:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2 #pega os dados que foram subidos e envia para a máquina ubuntu
       - uses: actions/setup-go@v2 #prepara o ambiente para rodar o go
